@@ -105,10 +105,3 @@ class Destroyer(models.Model):
         ["yo", "Yoruba"],
         ["zu", "Zulu"]
     ]
-
-    input = models.TextField('Text to destroy', default='Hello, world!')
-    initial_language = models.CharField(max_length=3, choices=LANGS, default=LANGS[LANGS.index(["en", "English"])])
-    output = models.TextField('Result', default='Station station')
-
-    def __str__(self):
-        return self.input
