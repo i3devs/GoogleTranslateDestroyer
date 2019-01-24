@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Translate Destroyer</title>
+</head>
+<body>
+<div>
+    <form method="POST" action="/destroy">
+        {% csrf_token %}
+        <textarea name="input" id="input" cols="30" rows="10">{{ input }}</textarea>
+        <select name="initial_language" id="init_lang">
+            {% for lang in langs %}
+                {% if lang.0 == default %}
+                    <option value={{ lang.0 }} selected>{{ lang.1 }}</option>
+                {% else %}
+                    <option value={{ lang.0 }}>{{ lang.1 }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <textarea name="output" id="output" cols="30" rows="10">{{ output }}</textarea>
+</div>
+</body>
+</html>
