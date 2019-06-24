@@ -4,8 +4,13 @@ Ever wanted to put something into Google Translate and pass it through every sin
 ## Installation
 Install [Python](https://www.python.org/) (at least version 3)
 
+Open a command prompt or terminal and activate the virtual environment provided with the cloned repository:
+```
+./gtransdest_venv/Scripts/activate
+```
+
 ## Starting
-To start Django's web server, open a command prompt and go to the directory where you cloned or downloaded the repository, then type the following command:
+To start Django's web server, open a command prompt or terminal and go to the directory where you cloned or downloaded the repository, then type the following command:
 - Windows:
 ```
 py manage.py runserver
