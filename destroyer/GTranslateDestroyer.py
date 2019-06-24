@@ -57,7 +57,7 @@ class GTranslateDestroyer:
         self.to_translate = text_to_destroy
         self.initial_language = initial_language
 
-        if number_of_languages <= self.MAX_LANGUAGES_NUMBER:
+        if self.MAX_LANGUAGES_NUMBER >= number_of_languages > 0:
             self.languages_number = number_of_languages
         else:
             self.languages_number = self.MAX_LANGUAGES_NUMBER
