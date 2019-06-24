@@ -15,7 +15,7 @@ Ever wanted to put something into Google Translate and pass it through every sin
   You can then extract this .ZIP file wherever you like.
 
 ## Starting
-Open a command prompt or terminal and go to the directory where you cloned or downloaded the repositoryopen a command prompt or terminal and go to the directory where you cloned or downloaded the repository open a command prompt or terminal and go to the directory where you cloned or downloaded the repository and activate the virtual environment provided with it:
+Open a command prompt or terminal, go to the directory where you cloned or downloaded the repository and activate the virtual environment provided with it:
 ```
 ./gtransdest_venv/Scripts/activate
 ```
