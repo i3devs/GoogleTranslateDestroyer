@@ -65,7 +65,7 @@ class GTranslateDestroyer:
     def destroy(self):
         result = self.to_translate
 
-        for i in range(0, self.languages_number):
+        for i in range(int(self.languages_number)):
             result = translate(result, self.LANGS[i])
             print(translate(result, self.initial_language))
 

@@ -72,6 +72,13 @@
                         {% endfor %}
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="langs_num">Number of languages to pass through</label>
+                    <input class="form-control" type="number" name="languages_number" id="langs_num" max="99"
+                           min="1"
+                           value="{{ langs_num }}">
+                </div>
                 <input type="submit" class="btn btn-block btn-primary mb-sm-4">
             </div>
         </form>
