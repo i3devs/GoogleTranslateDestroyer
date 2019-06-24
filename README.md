@@ -15,10 +15,22 @@ Ever wanted to put something into Google Translate and pass it through every sin
   You can then extract this .ZIP file wherever you like.
 
 ## Starting
+
+### Activating the virtual environment
 Open a command prompt or terminal, go to the directory where you cloned or downloaded the repository and activate the virtual environment provided with it:
 ```
 ./gtransdest_venv/Scripts/activate
 ```
+
+You should see the following text preceding the directory you're in:
+```text
+(gtransdest_venv)
+```
+
+For example:
+![Virtual environment activation](media/venv_activation.png)
+
+### Starting Django
 
 To start Django's web server then type the following command:
 - Windows:
