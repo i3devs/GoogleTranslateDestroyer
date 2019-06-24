@@ -2,12 +2,17 @@
 Ever wanted to put something into Google Translate and pass it through every single language, just to see what you'd end up with? No? Well, we made a web page for it anyway.
 
 ## Installation
-Install [Python](https://www.python.org/) (at least version 3)
+- Install [Python](https://www.python.org/) (at least version 3)
 
-Open a command prompt or terminal and activate the virtual environment provided with the cloned repository:
-```
-./gtransdest_venv/Scripts/activate
-```
+- Open a command prompt or terminal and clone the repository (obviously):
+  ```
+  git clone https://github.com/i3devs/GoogleTranslateDestroyer.git
+  ```
+
+- Go to the folder where you just cloned the repository and activate the virtual environment provided with it:
+    ```
+    ./gtransdest_venv/Scripts/activate
+    ```
 
 ## Starting
 To start Django's web server, open a command prompt or terminal and go to the directory where you cloned or downloaded the repository, then type the following command:
