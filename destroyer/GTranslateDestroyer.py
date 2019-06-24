@@ -1,3 +1,7 @@
+from time import monotonic
+
+from mtranslate import translate
+
 """
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,9 +23,8 @@ using Google Translate.
 Thanks to mouuff (https://github.com/mouuff) for his mtranslate Google Translate library (https://github.com/mouuff/mtranslate)
 
 Author: Matan Davidi
-Version: 28 December 2018
+Version: 18 June 2019
 """
-from .mtranslate.mtranslate import translate
 
 
 class GTranslateDestroyer:
@@ -67,11 +70,15 @@ class GTranslateDestroyer:
             self.languages_number = self.MAX_LANGUAGES_NUMBER
 
     def destroy(self):
+        start_time = monotonic()
+
         result = self.to_translate
 
         for i in range(int(self.languages_number)):
             result = translate(result, self.LANGS[i])
             print(translate(result, self.initial_language))
+
+        print(f"Elapsed time {monotonic() - start_time} seconds")
 
         return translate(result, self.initial_language)
 
