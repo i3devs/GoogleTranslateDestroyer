@@ -40,20 +40,20 @@ class GTranslateDestroyer:
             self.init_only_text(args[0])
         elif len(args) == 2:
             self.init_text_lang(args[0], args[1])
-        else:
-            self.init_text_num_lang(args[0], args[1], args[2])
+        elif len(args) >= 3:
+            self.init_text_num_lang(args[0], int(args[1]), args[2])
 
-    def init_only_text(self, text_to_destroy):
+    def init_only_text(self, text_to_destroy: str):
         self.to_translate = text_to_destroy
         self.initial_language = "en"
         self.languages_number = self.MAX_LANGUAGES_NUMBER
 
-    def init_text_lang(self, text_to_destroy, initial_language):
+    def init_text_lang(self, text_to_destroy: str, initial_language: str):
         self.to_translate = text_to_destroy
         self.initial_language = initial_language
         self.languages_number = self.MAX_LANGUAGES_NUMBER
 
-    def init_text_num_lang(self, text_to_destroy, number_of_languages, initial_language):
+    def init_text_num_lang(self, text_to_destroy: str, number_of_languages: int, initial_language: str):
         self.to_translate = text_to_destroy
         self.initial_language = initial_language
 
