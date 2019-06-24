@@ -13,13 +13,14 @@ def destroy(request):
     if request.method == 'POST':
         text = request.POST.get('input', None)
         langs_num = request.POST.get('languages_number', None)
+        lang = request.POST.get('initial_language', None)
         if len(text) > 0:
-            context = {'input': text, 'output': output, 'langs': Destroyer.LANGS, 'default': "en"}
-            return render(request, 'destroyer/index.html', context)
             try:
                 destroyer = GTranslateDestroyer(text, langs_num, lang)
 
                 output = destroyer.destroy()
+                context = {'input': text, 'output': output, 'langs': Destroyer.LANGS, 'language': lang,
+                           'langs_num': langs_num}
                 return render(request, 'destroyer/index.html', context)
             except TypeError:
                 return "The value inserted for the languages number is invalid."
