@@ -8,14 +8,19 @@ Ever wanted to put something into Google Translate and pass it through every sin
   ```
   git clone https://github.com/i3devs/GoogleTranslateDestroyer.git
   ```
-
-- Go to the folder where you just cloned the repository and activate the virtual environment provided with it:
-    ```
-    ./gtransdest_venv/Scripts/activate
-    ```
+  
+- Alternatively, you can download a .ZIP file containing the repository's contents via the GitHub page:
+ 
+  ![Download the repository's ZIP file](media/download_repo_zip.png)
+  You can then extract this .ZIP file wherever you like.
 
 ## Starting
-To start Django's web server, open a command prompt or terminal and go to the directory where you cloned or downloaded the repository, then type the following command:
+Open a command prompt or terminal and go to the directory where you cloned or downloaded the repositoryopen a command prompt or terminal and go to the directory where you cloned or downloaded the repository open a command prompt or terminal and go to the directory where you cloned or downloaded the repository and activate the virtual environment provided with it:
+```
+./gtransdest_venv/Scripts/activate
+```
+
+To start Django's web server then type the following command:
 - Windows:
 ```
 py manage.py runserver
